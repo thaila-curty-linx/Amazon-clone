@@ -1,0 +1,88 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 13px;
+}
+
+.search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.searchButton {
+  padding: 0;
+  height: 32px;
+  background-color: #febd69;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.searchButton:hover,
+.searchIcon:hover {
+  border: none;
+
+  background-color: #cd9042;
+}
+
+.searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #febd69;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.optionLineOne {
+  font-size: 10px !important;
+}
+
+.optionLineTwo {
+  font-size: 13px !important;
+  font-weight: 800 !important;
+}
+
+.optionBascket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.bascketCount {
+  margin: 0 10px;
+}
