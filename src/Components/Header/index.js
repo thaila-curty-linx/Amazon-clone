@@ -3,10 +3,17 @@ import './styles.css';
 import logo from '../../assets/images/amazon_logo.png';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import { Link } from 'react-router-dom';
+import { useStateValue } from '../../Context/stateProvider';
+
 function index() {
+  const [{ basket }] = useStateValue();
+
   return (
     <div className="header">
-      <img src={logo} className="logo" />
+      <Link to="/">
+        <img src={logo} className="logo" />
+      </Link>
       <div className="search">
         <input className="searchInput" type="text" />
         <button className="searchButton">
@@ -26,10 +33,12 @@ function index() {
           <span className="optionLineOne">Your</span>
           <span className="optionLineTwo">Prime</span>
         </div>
-        <div className="optionBascket">
-          <ShoppingBasketIcon />
-          <span className="optionLineTwo bascketCount">0</span>
-        </div>
+        <Link to="/checkout">
+          <div className="optionBascket">
+            <ShoppingBasketIcon />
+            <span className="optionLineTwo bascketCount">{basket?.length}</span>
+          </div>
+        </Link>
       </nav>
     </div>
   );
